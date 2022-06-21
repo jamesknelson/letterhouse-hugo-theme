@@ -1,0 +1,27 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "letterhouse-hugo-theme"
+license = "MIT"
+licenselink = "https://github.com/jamesknelson/letterhouse-hugo-theme/blob/master/LICENSE"
+description = "Minimalist hugo theme for letterwriters"
+homepage = "https://letter.house"
+demosite = "https://example.letter.house"
+
+tags = [
+  "letterwriting",
+  "responsive",
+  "clean",
+  "personal",
+]
+
+features = [
+  "letterwriting",
+  "search",
+]
+
+min_version = "0.41.0"
+
+[author]
+  name = "James K Nelson"
+  homepage = "https://jamesknelson.com"

@@ -1,0 +1,9 @@
+{{ if .Params.Topics }}
+    <ul class="topics">
+        {{ range (.GetTerms "topics") }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            </li>
+        {{ end }}
+    </ul>
+{{ end }}

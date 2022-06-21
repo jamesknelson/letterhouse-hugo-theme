@@ -1,0 +1,14 @@
+{{ define "main" }}
+    {{ $pages := where .Site.RegularPages "Type" "in" "letter" }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $pag := .Paginate ($filtered) }}
+
+    <section class="letter-list">
+        {{ range $index, $element := $pag.Pages }}
+            {{ partial "letter-list/default" . }}
+        {{ end }}
+    </section>
+
+    {{- partial "pagination.html" . -}}
+{{ end }}

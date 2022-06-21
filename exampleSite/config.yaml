@@ -1,0 +1,110 @@
+baseurl: https://example.com
+languageCode: en-us
+theme: letterhouse-hugo-theme
+themesdir: "../.."
+paginate: 3
+title: Example Site
+
+languages:
+    en:
+        languageName: English
+        title: Example Site
+        weight: 1
+    ja:
+        languageName: 日本語
+        title: 例のサイト
+        weight: 2
+
+
+# GA Tracking ID
+googleAnalytics:
+
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: en
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: false
+
+permalinks:
+    letter: /:year/:month/:day/
+    page: /:slug/
+
+params:
+    author:
+        avatar:
+            enabled: true
+            local: true
+            src: img/avatar.png
+        bio: Building an internet that enriches us without manipulating us
+        twitter:
+            username: 
+
+
+    footer:
+        since: 2022
+
+    dateFormat:
+        published: Jan 02, 2006
+        lastUpdated: Jan 02, 2006 15:04 MST
+
+    article:
+        math: false
+        toc: true
+
+    widgets:
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
+
+    imageProcessing:
+        cover:
+            enabled: true
+        content:
+            enabled: true
+
+### Custom menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+menu:
+    main: []
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
+markup:
+    goldmark:
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: false
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
+    highlight:
+        noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4
