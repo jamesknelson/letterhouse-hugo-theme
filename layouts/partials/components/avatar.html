@@ -1,0 +1,17 @@
+<figure class="avatar">
+    <a href="{{ $.Site.BaseURL | relLangURL }}">
+    {{ if not .avatar.local }}
+        <img src="{{ .avatar.src }}" width="{{ .size }}" height="{{ .size }}" class="site-logo" loading="lazy" alt="Avatar">
+    {{ else }}
+        {{ $avatar := resources.Get (.avatar.src) }}
+        
+        {{ if $avatar }}
+            {{ $avatarResized := $avatar.Resize (printf "%sx" .size) }}
+            <img src="{{ $avatarResized.RelPermalink }}" width="{{ $avatarResized.Width }}"
+                height="{{ $avatarResized.Height }}" class="site-logo" loading="lazy" alt="Avatar">
+        {{ else }}
+            {{ errorf "Failed loading avatar from %q" . }}
+        {{ end }}
+    {{ end }}
+    </a>
+</figure>

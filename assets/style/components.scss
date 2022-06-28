@@ -1,0 +1,16 @@
+figure.avatar {
+    display: inline-flex;
+    flex-grow: 0;
+    border-radius: 50%;
+    overflow: hidden;
+
+    > a {
+        display: flex;
+        flex-grow: 0;
+
+        > img {
+            display: flex;
+            flex-grow: 0;
+        }
+    }
+}

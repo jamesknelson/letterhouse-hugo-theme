@@ -1,4 +1,4 @@
-<header class="letter-header">
+<header class="letter">
     {{ partial "letter/to" . }}
     {{ partial "letter/regarding" . }}
 
@@ -16,10 +16,11 @@
         {{ end }}
     </div>
 
-    {{ with .Params.blurb }}
-    <div class="letter-blurb">
+    {{- $blurb := split (trim .Params.blurb "\nb") "\n\n" -}}
+    {{ with $blurb }}
+    <div class="blurb">
         {{ range . }}
-            <p class="letter-blurb">
+            <p>
                 {{ . }}
             </p>
         {{ end }}
@@ -27,28 +28,26 @@
     {{ end }}
 
     {{ if or (not .Date.IsZero) (ne .Lastmod .Date) }}
-    <footer class="article-time">
+    <section class="dates">
         {{ if not .Date.IsZero }}
-            <div>
-                <time class="article-time--published">
-                    {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
-                </time>
-            </div>
+        <time class="published">
+            {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+        </time>
         {{ end }}
 
         {{- if ne .Lastmod .Date -}}
-        <section class="article-lastmod">
-            Last updated
+        <span class="updated-at">
+            Updated at
             <span>
                 {{ T "article.lastUpdatedOn" }} {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated "Jan 02, 2006 15:04 MST" ) }}
             </span>
-        </section>
+        </span>
         {{- end -}}
-    </footer>
+    </section>
     {{ end }}
 
     {{ if .IsTranslated }}
-        <footer class="article-translations">
+        <footer class="letter-translations">
             Translations
             <div>
                 {{ range .Translations }}

@@ -1,9 +1,18 @@
 :root {
-    --color-structure-bg: #ffffff;
-    --color-structure-canvas: #F5F7F9;
-    --color-structure-wash: #F9FbFd;
-    --color-structure-border: #ECEEF5;
-    --color-structure-divider: #F6F7F8;
+    --color-bg: #FBFcFf;
+    --color-on-bg: #0c0e10;
+
+    --color-primary: #1e3c5b;
+    --color-on-primary: #03070a;
+    --color-primary-wash: 242, 246, 253;
+    --color-on-primary-wash: #03070a;
+
+    --color-secondary: #0123e3;
+
+    --color-surface: #ffffff;
+    --color-surface-line: #f7f8f9;
+    --color-surface-border: #eff1f3;
+    --color-on-surface: #0c0e10;
 
     --dim-rem-to-px: 16;
 }

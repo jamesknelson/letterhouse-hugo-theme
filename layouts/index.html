@@ -1,3 +1,7 @@
+{{ define "main-class" }}
+    top
+{{ end }}
+
 {{ define "main" }}
     {{ $pages := where .Site.RegularPages "Type" "in" "letter" }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
@@ -6,8 +10,11 @@
 
     <section class="letter-list">
         {{ range $index, $element := $pag.Pages }}
-            {{ partial "letter-list/default" . }}
+            {{ partial "letter/brief" . }}
         {{ end }}
+    </section>
+    <section class="sidebar">
+        {{ partial "site/sidebar" . }}
     </section>
 
     {{- partial "pagination.html" . -}}

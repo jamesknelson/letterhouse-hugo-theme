@@ -2,10 +2,11 @@
 author = "Hugo Authors"
 title = "Rich Content"
 date = "2019-03-10"
-blurb = [
-    "A brief description of Hugo Shortcodes",
-    "As they can be used within a Letterhouse installation"
-]
+blurb = '''
+A brief description of Hugo Shortcodes.
+
+As they can be used within a Letterhouse installation.
+'''
 tags = [
     "shortcodes",
     "privacy",

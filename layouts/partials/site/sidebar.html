@@ -1,0 +1,6 @@
+<section class="about-the-author">
+    {{ partial "components/avatar" (dict "size" 128 "avatar" .Site.Params.author.avatar) }}
+    <p>
+        {{ .Site.Params.author.bio }}
+    </p>
+</section>

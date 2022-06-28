@@ -5,11 +5,14 @@
         {{- block "head" . -}}{{ end }}
     </head>
     <body class="{{ block `body-class` . }}{{ end }}">
-        <div class="site">
-            <main class="site-main">
+        <div id="site">
+            <header class="site">
+                {{ partial "site/header" . }}
+            </header>
+            <main class="{{ block `body-class` . }}{{ end }}">
                 {{- block "main" . }}{{- end }}
             </main>
-            <footer class="site-footer">
+            <footer class="site">
             {{ partial "site/footer" . }}
             </footer>
         </div>

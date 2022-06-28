@@ -12,7 +12,7 @@ $mediaQueries: (
     @if not map-has-key($mediaQueries, $name) {
         @warn "'#{$name}' is not a valid breakpoint";
     } @else {
-        @media all and (map-get($breakpoints, $breakpoint)) {
+        @media #{map-get($mediaQueries, $name)} {
             @content;
         }
     }

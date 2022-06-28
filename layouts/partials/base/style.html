@@ -1,3 +1,18 @@
+<link
+    rel="preload"
+    as="font"
+    href="/font/karla-v15-latin-ext_latin-regular.woff2"
+    type="font/woff2"
+    crossOrigin="anonymous"
+/>
+<link
+    rel="preload"
+    as="font"
+    href="/font/karla-v15-latin-ext_latin-700.woff2"
+    type="font/woff2"
+    crossOrigin="anonymous"
+/>
+
 {{ $sass := resources.Get "style/style.scss" }}
 {{ $style := $sass | resources.ToCSS | minify | resources.Fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">

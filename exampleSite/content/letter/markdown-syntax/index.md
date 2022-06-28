@@ -1,10 +1,13 @@
 +++
 author = "Hugo Authors"
+to = [
+  "Hugo users",
+]
 title = "Markdown Syntax Guide"
 date = "2019-03-11"
-blurb = [
-  "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-]
+blurb = '''
+Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+'''
 tags = [
     "markdown",
     "css",

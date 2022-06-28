@@ -34,12 +34,15 @@ permalinks:
 params:
     author:
         avatar:
-            enabled: true
-            local: true
-            src: img/avatar.png
-        bio: Building an internet that enriches us without manipulating us
+            local: false
+            src: https://ui-avatars.com/api/?size=256&background=d8dbde&color=606672&name=Letter+House
+        bio: Building an internet that enriches us without manipulating us.
+        email: letters@example.com
         twitter:
             username: 
+
+    site:
+        subtitle: Thoughts, stories and ideas.
 
 
     footer:

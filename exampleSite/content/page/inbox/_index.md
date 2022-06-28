@@ -1,8 +1,8 @@
 ---
 menu:
     main:
-        name: My Letters
-        weight: 10
+        name: My Inbox
+        weight: 20
         params:
             icon: home
 ---

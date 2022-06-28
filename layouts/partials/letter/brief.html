@@ -1,5 +1,9 @@
-<article class="letter-brief">
+<article class="letter brief">
     {{ partial "letter/header" . }}
 
-    <footer></footer>    
+    <footer>
+        <a class="reply" href="mailto:{{.Site.Params.author.email}}">
+            Reply
+        </a>
+    </footer>    
 </article>
